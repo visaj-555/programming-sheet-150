@@ -1,4 +1,3 @@
-// Method 1: Using nested loops with string concatenation
 function printPattern1(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
@@ -9,13 +8,11 @@ function printPattern1(n) {
   }
 }
 
-console.log("Pattern 1   : ");
-printPattern1(4);
+console.log("Pattern 1 : ");
 
 function printPattern2(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
-    // Start from i and go down to 1
     for (let j = i; j >= 1; j--) {
       row += j + " ";
     }
@@ -23,9 +20,7 @@ function printPattern2(n) {
   }
 }
 
-console.log("Pattern 2   : ");
-
-printPattern2(4);
+console.log("Pattern 2 : ");
 
 function printPattern3(n) {
   for (let i = 1; i <= n; i++) {
@@ -39,9 +34,6 @@ function printPattern3(n) {
   }
 }
 
-console.log("Pattern 3  : ");
-printPattern3(5);
-
 function printPattern4(n) {
   for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= n - i + 1; j++) {
@@ -52,7 +44,6 @@ function printPattern4(n) {
 }
 
 console.log("Pattern 4 : ");
-printPattern4(5);
 
 function printPattern5(n) {
   for (let i = 1; i <= n; i++) {
@@ -64,7 +55,6 @@ function printPattern5(n) {
 }
 
 console.log("Pattern 5 : ");
-printPattern5(5);
 
 function printPattern6(n) {
   for (let i = 1; i <= n; i++) {
@@ -76,4 +66,16 @@ function printPattern6(n) {
 }
 
 console.log("Pattern 6 : ");
-printPattern6(5);
+
+function Pattern7(n) {
+  for (let i = 1; i <= n; i++) {
+    let row = " ";
+    for (let j = 1; j <= i; j++) {
+      row += "*";
+    }
+    console.log(row);
+  }
+}
+
+console.log("Pattern 7 : ");
+Pattern7(8);
