@@ -44,14 +44,36 @@ printPattern3(5);
 
 function printPattern4(n) {
   for (let i = 1; i <= n; i++) {
-    // Outer loop: Rows (Runs n times)
     for (let j = 1; j <= n - i + 1; j++) {
-      // Inner loop: Columns (Decreases each row)
-      process.stdout.write("* "); // Print '*' in the same line
+      process.stdout.write("* ");
     }
-    console.log(""); // Move to the next line after finishing a row
+    console.log("");
   }
 }
 
 console.log("Pattern 4 : ");
 printPattern4(5);
+
+function printPattern5(n) {
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n - i + 1; j++) {
+      process.stdout.write(j + " ");
+    }
+    console.log("");
+  }
+}
+
+console.log("Pattern 5 : ");
+printPattern5(5);
+
+function printPattern6(n) {
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n - i + 1; j++) {
+      process.stdout.write(i + " ");
+    }
+    console.log("");
+  }
+}
+
+console.log("Pattern 6 : ");
+printPattern6(5);
