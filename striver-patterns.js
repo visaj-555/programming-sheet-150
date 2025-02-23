@@ -1,4 +1,4 @@
-function printPattern1(n) {
+function Square(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
     for (let j = 1; j <= n; j++) {
@@ -10,9 +10,9 @@ function printPattern1(n) {
 }
 
 console.log("Square : ");
-printPattern1(5);
+Square(5);
 
-function printPattern2(n) {
+function LeftAngleTriangle(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
     for (let j = 1; j <= i; j++) {
@@ -24,9 +24,9 @@ function printPattern2(n) {
 }
 
 console.log("Left Angle Triangle : ");
-printPattern2(5);
+LeftAngleTriangle(5);
 
-function printPattern3(n) {
+function RightAngleTriangle(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
     for (let j = 1; j <= n - i + 1; j++) {
@@ -38,9 +38,9 @@ function printPattern3(n) {
 }
 
 console.log("Right Angle Triangle: ");
-printPattern3(5);
+RightAngleTriangle(5);
 
-function printPattern4(n) {
+function RightAngleRepeatNumber(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
     for (let j = 1; j <= n - i + 1; j++) {
@@ -52,9 +52,9 @@ function printPattern4(n) {
 }
 
 console.log("Right Angle Repeatative Number : ");
-printPattern4(5);
+RightAngleRepeatNumber(5);
 
-function printPattern5(n) {
+function LeftAngleRepeatNumber(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
     for (let j = 1; j <= i; j++) {
@@ -66,9 +66,9 @@ function printPattern5(n) {
 }
 
 console.log("Left Angle Repeatative Number  : ");
-printPattern5(5);
+LeftAngleRepeatNumber(5);
 
-function printPattern6(n) {
+function LeftAngleIncreasing(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
     for (let j = 1; j <= i; j++) {
@@ -80,9 +80,9 @@ function printPattern6(n) {
 }
 
 console.log("Left Angle Increasing: ");
-printPattern6(5);
+LeftAngleIncreasing(5);
 
-function printPattern7(n) {
+function RightDecreasingSameNumber(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
     for (let j = 1; j <= n - i + 1; j++) {
@@ -94,9 +94,9 @@ function printPattern7(n) {
 }
 
 console.log("Right Angle Decreasing Repeatative : ");
-printPattern7(5);
+RightDecreasingSameNumber(5);
 
-function printPattern8(n) {
+function RightDecreasing(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
     for (let j = 1; j <= n - i + 1; j++) {
@@ -108,9 +108,9 @@ function printPattern8(n) {
 }
 
 console.log("Right Angle Decreasing : ");
-printPattern8(5);
+RightDecreasing(5);
 
-function printPattern9(n) {
+function Pyramid(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
     for (let j = 1; j <= n - i + 1; j++) {
@@ -122,7 +122,7 @@ function printPattern9(n) {
 }
 
 console.log("Pyramid :  ");
-printPattern9(5);
+Pyramid(5);
 
 function printDiamond(n) {
   for (let i = 1; i <= n; i++) {
