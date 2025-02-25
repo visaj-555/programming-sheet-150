@@ -406,9 +406,11 @@ function AlphaPalindromePyramid(n) {
 
 function InvertedAlphaTriangle(n) {
   for (let i = 0; i < n; i++) {
-    let row = [];
-    for (let j = i; j >= 0; j--) row.push(String.fromCharCode(65 + n - 1 - j));
-    console.log(row.join(" "));
+    let row = "";
+    for (let j = 0; j <= i; j++) {
+      row = row + String.fromCharCode(65 + n - 1 - j) + " ";
+    }
+    console.log(row.trim());
   }
 }
 
@@ -423,9 +425,20 @@ function diamondSandglassPattern(n) {
     let stars = i < n ? i + 1 : 2 * n - i - 1;
     let spaces = 2 * (n - stars);
 
-    row += "*".repeat(stars);
-    row += " ".repeat(spaces);
-    row += "*".repeat(stars);
+    // Add stars on the left
+    for (let j = 0; j < stars; j++) {
+      row = row + "*";
+    }
+
+    // Add spaces in the middle
+    for (let j = 0; j < spaces; j++) {
+      row = row + " ";
+    }
+
+    // Add stars on the right
+    for (let j = 0; j < stars; j++) {
+      row = row + "*";
+    }
 
     console.log(row);
   }
@@ -473,4 +486,4 @@ function zigZagPattern(n) {
 
 console.log("Zig Zag Pattern : ");
 
-zigZagPattern(9);
+zigZagPattern(27);
