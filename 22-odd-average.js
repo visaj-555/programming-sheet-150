@@ -10,4 +10,4 @@ function sumOfOddNumbers(start, end) {
   console.log("Sum of odd numbers:", sum);
 }
 
-sumOfEvenNumbers(1, 10);
+sumOfOddNumbers(1, 10);
