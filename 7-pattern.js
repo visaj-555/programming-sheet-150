@@ -1,5 +1,7 @@
 let n = 5;
 
+console.log("Pyramid : ");
+
 for (let i = 0; i < n; i++) {
   let row = "";
 

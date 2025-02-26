@@ -1,17 +1,13 @@
 // EASY APPROACH
 
-function factorial(n) {
-  let result = 1;
-
-  for (let i = n; i >= 1; i--) {
-    result *= i; // Multiply instead of adding
+function fact(n) {
+  let res = 1;
+  for (let i = 1; i <= n; i++) {
+    res *= i;
   }
-
-  return result;
+  return res;
 }
-
-let number = 5;
-console.log("Factorial of", number, "is:", factorial(number));
+console.log(fact(5));
 
 // RECURSIVE APPROACH
 function factorial(n) {

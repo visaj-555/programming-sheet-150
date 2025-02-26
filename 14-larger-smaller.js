@@ -1,13 +1,13 @@
 function findLargestAndSmallest(arr) {
-  let largest = arr[0]; // Assume first element is largest
-  let smallest = arr[0]; // Assume first element is smallest
+  let largest = arr[0];
+  let smallest = arr[0];
 
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] > largest) {
-      largest = arr[i]; // Update largest if current element is greater
+      largest = arr[i];
     }
     if (arr[i] < smallest) {
-      smallest = arr[i]; // Update smallest if current element is smaller
+      smallest = arr[i];
     }
   }
 

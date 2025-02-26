@@ -1,20 +1,16 @@
-/**
- * @param {string} s
- * @return {boolean}
- */
-var isPalindrome = function (s) {
-  let cleanStr = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+function checkPalindrome(string) {
+  const len = string.length;
 
-  let left = 0;
-  let right = cleanStr.length - 1;
-
-  while (left < right) {
-    if (cleanStr[left] !== cleanStr[right]) {
-      return false;
+  for (let i = 0; i < len / 2; i++) {
+    if (string[i] !== string[len - 1 - i]) {
+      return "It is not a palindrome";
     }
-    left++;
-    right--;
   }
+  return "It is a palindrome";
+}
 
-  return true;
-};
+const string = "Visaj";
+
+const value = checkPalindrome(string);
+
+console.log(value);

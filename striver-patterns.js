@@ -1,4 +1,4 @@
-///////////-----------------SQUARE-------------//////////////
+//====================== SQUARE  ======================//
 
 function Square(n) {
   for (let i = 1; i <= n; i++) {
@@ -14,7 +14,7 @@ function Square(n) {
 console.log("Square : ");
 Square(5);
 
-///////////-----------------LEFT ANGLE TRIANGLE-------------//////////////
+//====================== LEFT ANGLE TRIANGLE  ======================//
 
 function LeftAngleTriangle(n) {
   for (let i = 1; i <= n; i++) {
@@ -30,7 +30,7 @@ function LeftAngleTriangle(n) {
 console.log("Left Angle Triangle : ");
 LeftAngleTriangle(5);
 
-///////////-----------------RIGHT ANGLE TRIANGLE-------------//////////////
+//====================== RIGHT ANGLE TRIANGLE  ======================//
 
 function RightAngleTriangle(n) {
   for (let i = 1; i <= n; i++) {
@@ -46,7 +46,7 @@ function RightAngleTriangle(n) {
 console.log("Right Angle Triangle: ");
 RightAngleTriangle(5);
 
-///////////-----------------RIGHT ANGLE TRIANGLE SAME NUMBER -------------//////////////
+//====================== RIGHT ANGLE TRIANGLE SAME NUMBER  ======================//
 
 function RightAngleRepeatNumber(n) {
   for (let i = 1; i <= n; i++) {
@@ -62,7 +62,7 @@ function RightAngleRepeatNumber(n) {
 console.log("Right Angle Repeatative Number : ");
 RightAngleRepeatNumber(5);
 
-///////////-----------------LEFT ANGLE TRIANGLE SAME NUMBER -------------//////////////
+//====================== LEFT ANGLE TRIANGLE SAME NUMBER  ======================//
 
 function LeftAngleRepeatNumber(n) {
   for (let i = 1; i <= n; i++) {
@@ -78,7 +78,7 @@ function LeftAngleRepeatNumber(n) {
 console.log("Left Angle Repeatative Number  : ");
 LeftAngleRepeatNumber(5);
 
-///////////-----------------LEFT ANGLE INCREASING -------------//////////////
+//====================== LEFT ANGLE INCREASING  ======================//
 
 function LeftAngleIncreasing(n) {
   for (let i = 1; i <= n; i++) {
@@ -94,7 +94,7 @@ function LeftAngleIncreasing(n) {
 console.log("Left Angle Increasing: ");
 LeftAngleIncreasing(5);
 
-///////////-----------------RIGHT ANGLE DECREASING SAME NUMBER -------------//////////////
+//====================== RIGHT ANGLE DECREASING SAME NUMBER  ======================//
 
 function RightDecreasingSameNumber(n) {
   for (let i = 1; i <= n; i++) {
@@ -110,7 +110,7 @@ function RightDecreasingSameNumber(n) {
 console.log("Right Angle Decreasing Repeatative : ");
 RightDecreasingSameNumber(5);
 
-///////////-----------------RIGHT ANGLE DECREASING NUMBER -------------//////////////
+//====================== RIGHT ANGLE DECREASING DIFFERENT NUMBER  ======================//
 
 function RightDecreasing(n) {
   for (let i = 1; i <= n; i++) {
@@ -126,7 +126,7 @@ function RightDecreasing(n) {
 console.log("Right Angle Decreasing : ");
 RightDecreasing(5);
 
-///////////-----------------PYRAMID -------------//////////////
+//====================== PYRAMID  ======================//
 
 function Pyramid(n) {
   for (let i = 1; i <= n; i++) {
@@ -145,7 +145,7 @@ function Pyramid(n) {
 
 Pyramid(5);
 
-///////////-----------------DIAMOND -------------//////////////
+//====================== DIAMOND  ======================//
 
 function printDiamond(n) {
   for (let i = 1; i <= n; i++) {
@@ -184,7 +184,7 @@ function printDiamond(n) {
 console.log("Diamond Pattern:");
 printDiamond(5);
 
-///////////-----------------HOLLOW SQUARE -------------//////////////
+//====================== HOLLOW RECTANGLE  ======================//
 
 function HollowRectangle(n) {
   for (let i = 1; i <= n; i++) {
@@ -205,7 +205,32 @@ function HollowRectangle(n) {
 console.log("Hollow Rectangle: ");
 HollowRectangle(5);
 
-///////////-----------------Left Angle Triangle -------------//////////////
+//====================== HOLLOW DIAMOND  ======================//
+
+function HollowDiamond(n) {
+  let totalRows = 2 * n - 1;
+
+  for (let i = 0; i < totalRows; i++) {
+    let row = "";
+    let spacesBefore = Math.abs(n - 1 - i);
+    let spacesBetween = 2 * (n - 1 - spacesBefore) - 1;
+
+    row += " ".repeat(spacesBefore);
+
+    row += "*";
+
+    if (spacesBetween > 0) {
+      row += " ".repeat(spacesBetween) + "*";
+    }
+
+    console.log(row);
+  }
+}
+
+console.log("Hollow Diamond : ");
+HollowDiamond(5);
+
+//====================== LEFT ANGLE TRIANGLE  ======================//
 
 function printLeftTriangle(n) {
   for (let i = 1; i <= n; i++) {
@@ -228,14 +253,13 @@ function printLeftTriangle(n) {
 console.log("Left Triangle Pattern:");
 printLeftTriangle(5);
 
-///////////-----------------HOLLOW RIGHT ANGLE TRIANGLE -------------//////////////
+//====================== HOLLOW RIGHT ANGLE TRIANGLE  ======================//
 
 function printHollowRightTriangle(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
 
     for (let j = 1; j <= i; j++) {
-      // Print star if it's first/last column or last row or first row
       if (j === 1 || j === i || i === n) {
         row += "*";
       } else {
@@ -250,7 +274,7 @@ function printHollowRightTriangle(n) {
 console.log("\nHollow Right Triangle Pattern:");
 printHollowRightTriangle(5);
 
-///////////-----------------HOLLOW PYRAMID -------------//////////////
+//====================== HOLLOW PYRAMID ======================//
 
 function printHollowPyramid(n) {
   for (let i = 1; i <= n; i++) {
@@ -263,9 +287,8 @@ function printHollowPyramid(n) {
 
     // Print stars and spaces inside
     for (let j = 1; j <= 2 * i - 1; j++) {
-      if (j === 1 || j === 2 * i - 1 || i === n)
-        row += "*"; // Print stars at edges
-      else row += " "; // Print spaces inside
+      if (j === 1 || j === 2 * i - 1 || i === n) row += "*";
+      else row += " ";
     }
 
     console.log(row);
@@ -275,22 +298,20 @@ function printHollowPyramid(n) {
 console.log("\nHollow Pyramid Pattern:");
 printHollowPyramid(5);
 
-///////////-----------------PASCAL TRIANGLE -------------//////////////
+//====================== PASCAL TRIANGLE ======================//
 
 function pascalTriangle(n) {
   for (let i = 0; i < n; i++) {
     let row = "";
 
-    // Add spaces for center alignment
     for (let space = 0; space < n - i - 1; space++) {
       row += " ";
     }
 
-    // Print numbers using Pascal's formula
     let num = 1;
     for (let j = 0; j <= i; j++) {
-      row += num + " "; // Add number + space for spacing
-      num = (num * (i - j)) / (j + 1); // Compute next number
+      row += num + " ";
+      num = (num * (i - j)) / (j + 1);
     }
 
     console.log(row);
@@ -300,16 +321,16 @@ function pascalTriangle(n) {
 console.log("Pascal's Triangle:");
 pascalTriangle(5);
 
-///////////-----------------BINARY TOGGLE TRIANGLE -------------//////////////
+//====================== BINARY TOGGLE TRIANGLE ======================//
 
 function binaryToggleTriangle(n) {
   for (let i = 1; i <= n; i++) {
     let row = "";
-    let start = i % 2 === 0 ? 0 : 1; // Start with 1 if odd row, 0 if even
+    let start = i % 2 === 0 ? 0 : 1;
 
     for (let j = 1; j <= i; j++) {
-      row += start; // Add current binary digit
-      start = 1 - start; // Toggle (0 → 1, 1 → 0)
+      row += start;
+      start = 1 - start;
     }
 
     console.log(row);
@@ -319,7 +340,7 @@ function binaryToggleTriangle(n) {
 console.log("Binary Toggle Right Angle Triangle:");
 binaryToggleTriangle(5);
 
-///////////-----------------MIRROR NUMBER TRIANGLE -------------//////////////
+//====================== MIRROR NUMBER TRIANGLE ======================//
 
 function mirroredNumbersTriangle(n) {
   for (let i = 1; i <= n; i++) {
@@ -340,7 +361,7 @@ function mirroredNumbersTriangle(n) {
 
 mirroredNumbersTriangle(5);
 
-///////////-----------------SEQUENCE NUMBER TRIANGLE -------------//////////////
+//====================== SEQUENCE NUMBER TRIANGLE ======================//
 
 function sequentialNumbersTriangle(n) {
   let count = 1;
@@ -359,7 +380,7 @@ function sequentialNumbersTriangle(n) {
 console.log("Sequential Numbers Triangle:");
 sequentialNumbersTriangle(5);
 
-///////////-----------------ALPHABET INCREASING TRIANGLE -------------//////////////
+//====================== ALPHABET INCREASING TRIANGLE ======================//
 
 function alphabetIncreasingTriangle(n) {
   for (let i = 1; i <= n; i++) {
@@ -374,7 +395,7 @@ function alphabetIncreasingTriangle(n) {
 console.log("Pattern 15: Alphabet Increasing Triangle");
 alphabetIncreasingTriangle(5);
 
-///////////-----------------ALPHABET DECREASING TRIANGLE -------------//////////////
+//====================== ALPHABET DECREASING TRIANGLE ======================//
 
 function alphabetDecreasingTriangle(n) {
   for (let i = 0; i < n; i++) {
@@ -389,20 +410,20 @@ function alphabetDecreasingTriangle(n) {
 console.log("Pattern 16: Alphabet Decreasing Triangle");
 alphabetDecreasingTriangle(5);
 
-///////////-----------------ALPHABET PALINDROME PYRAMID -------------//////////////
+//====================== ALPHABET PALINDROME PYRAMID ======================//
 
 function AlphaPalindromePyramid(n) {
   for (let i = 0; i < n; i++) {
-    let row = " ".repeat(n - i - 1); // Spaces in front
-    for (let j = 0; j <= i; j++) row += String.fromCharCode(65 + j); // Forward letters
-    for (let j = i - 1; j >= 0; j--) row += String.fromCharCode(65 + j); // Reverse letters
+    let row = " ".repeat(n - i - 1);
+    for (let j = 0; j <= i; j++) row += String.fromCharCode(65 + j);
+    for (let j = i - 1; j >= 0; j--) row += String.fromCharCode(65 + j);
     console.log(row);
   }
   console.log("Alphabet Palindrome Pyramid : ");
   AlphaPalindromePyramid(6);
 }
 
-///////////-----------------INVERTED ALPHABET TRIANGLE -------------//////////////
+//====================== INVERTED ALPHABET TRIANGLE ======================//
 
 function InvertedAlphaTriangle(n) {
   for (let i = 0; i < n; i++) {
@@ -417,7 +438,7 @@ function InvertedAlphaTriangle(n) {
 console.log("Inverted Alpha Triangle : ");
 InvertedAlphaTriangle(6);
 
-///////////-----------------DIAMOND SAND GLASS PATTERN -------------//////////////
+//====================== DIAMOND SAND GLASS PATTERN  ======================//
 
 function diamondSandglassPattern(n) {
   for (let i = 0; i < 2 * n - 1; i++) {
@@ -447,7 +468,7 @@ function diamondSandglassPattern(n) {
 console.log("Diamond Sand Glass Pattern : ");
 diamondSandglassPattern(6);
 
-///////////-----------------NUMBER DIAMOND GRID-------------//////////////
+//====================== NUMBER DIAMOND GRID ======================//
 
 function numberDiamondGrid(n) {
   let size = 2 * n - 1;
@@ -465,7 +486,7 @@ console.log("Number Grid Pattern : ");
 
 numberDiamondGrid(6);
 
-///////////-----------------ZIGZAG PATTERN -------------//////////////
+//====================== ZIGZAG PATTERN ======================//
 
 function zigZagPattern(n) {
   for (let i = 1; i <= 3; i++) {
@@ -474,9 +495,9 @@ function zigZagPattern(n) {
 
     for (let j = 1; j <= n; j++) {
       if ((i + j) % 4 === 0 || (i === 2 && j % 4 === 0)) {
-        row += "*"; // Place star in the wave position
+        row += "*";
       } else {
-        row += " "; // Empty space
+        row += " ";
       }
     }
 

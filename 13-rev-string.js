@@ -8,4 +8,5 @@ function reverseString(str) {
   return reversed;
 }
 
+console.log("Reverse String : ");
 console.log(reverseString("programming"));
