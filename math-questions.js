@@ -21,7 +21,6 @@ console.log("Recursive :  ", factorialRecursive(5));
 
 function sumOfDigits(num) {
   let sum = 0;
-  // let i = num;
 
   while (num > 0) {
     let lastDigit = num % 10;

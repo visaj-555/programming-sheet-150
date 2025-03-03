@@ -17,7 +17,7 @@ function findPrimesInRange(L, R) {
 }
 
 console.log("Find Prime Numbers in Range  : ");
-findPrimesInRange(10, 30);
+findPrimesInRange(10, 100);
 
 //====================== SUM OF PRIME NUMBERS  =====================//
 

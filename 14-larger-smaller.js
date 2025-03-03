@@ -14,5 +14,4 @@ function findLargestAndSmallest(arr) {
   console.log(`Largest: ${largest}, Smallest: ${smallest}`);
 }
 
-// Example usage
 findLargestAndSmallest([4, 7, 1, 8, 5]);

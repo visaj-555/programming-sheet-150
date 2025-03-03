@@ -8,5 +8,5 @@ for (let i = 0; i < n; i++) {
   b = temp;
 }
 
-console.log("Fibonacci Series : ");
+console.log("Fibonacci Number : ");
 console.log(a);
