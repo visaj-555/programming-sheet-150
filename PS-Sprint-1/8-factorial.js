@@ -3,7 +3,7 @@
 function fact(n) {
   let res = 1;
   for (let i = 1; i <= n; i++) {
-    res *= i;
+    res *= res; // res = res * i;
   }
   return res;
 }

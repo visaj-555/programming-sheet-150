@@ -7,4 +7,4 @@ function fibonacciSeries(n) {
   }
   return fib.slice(0, n);
 }
-console.log(fibonacciSeries(50));
+console.log(fibonacciSeries(10));

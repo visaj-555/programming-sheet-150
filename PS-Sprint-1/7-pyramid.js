@@ -17,3 +17,12 @@ for (let i = 0; i < n; i++) {
 
   console.log(row);
 }
+
+for (let i = 1; i <= n; i++) {
+  // calculate spaces and stars
+  let spaces = " ".repeat(n - i);
+  let stars = "*".repeat(2 * i - 1);
+
+  // print the line
+  console.log(spaces + stars);
+}

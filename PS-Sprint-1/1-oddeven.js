@@ -5,5 +5,3 @@ if (number % 2 == 0) {
 } else {
   console.log("Odd");
 }
-
-// Determining Even/Odd Numbers
