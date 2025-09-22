@@ -1,3 +1,10 @@
-function power(base, exponent) {}
+function power(base, exponent) {
+  let power = 1;
+  for (let i = 0; i < exponent; i++) {
+    power = power * base;
+  }
 
-power(2, 3);
+  return power;
+}
+
+console.log(power(10, 3));
