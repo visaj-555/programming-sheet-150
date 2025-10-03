@@ -1,3 +1,23 @@
+function compactdiamondPattern(n) {
+  // Upper half
+  for (let i = 1; i <= n; i += 2) {
+    let spaces = " ".repeat((n - i) / 2);
+    let stars = "*".repeat(i);
+    console.log(spaces + stars);
+  }
+
+  // Lower half
+  for (let i = n - 2; i >= 1; i -= 2) {
+    let spaces = " ".repeat((n - i) / 2);
+    let stars = "*".repeat(i);
+    console.log(spaces + stars);
+  }
+}
+
+console.log("Compact Diamond : ");
+
+compactdiamondPattern(10);
+
 function diamondPattern(n) {
   // Upper half
   for (let i = 1; i <= n; i++) {
@@ -34,4 +54,5 @@ function diamondPattern(n) {
   }
 }
 
+console.log("Full Diamond : ");
 diamondPattern(5);
