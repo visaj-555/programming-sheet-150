@@ -1,15 +1,56 @@
 function longestConsecutiveNumber(arr) {
-  let arr2 = arr.sort((a, b) => a - b);
-  let count = 0;
-
-  for (let i = 0; i < arr2.length; i++) {
-    for (let j = 1; j < arr2.length; j++) {
-      if (arr2[j] - 1 == arr2[i]) {
-        count++;
-      }
-    }
-    return count;
+  if (arr.length === 0) {
+    return 0;
   }
+
+  let arr2 = arr.sort((a, b) => a - b);
+  let maxCount = 1;
+  let currentCount = 1;
+
+  for (let i = 1; i < arr2.length; i++) {
+    if (arr2[i] === arr2[i - 1]) {
+      continue;
+    }
+
+    if (arr2[i] === arr2[i - 1] + 1) {
+      currentCount++;
+      maxCount = Math.max(maxCount, currentCount);
+    } else {
+      currentCount = 1;
+    }
+  }
+
+  return maxCount;
 }
 
-console.log(longestConsecutiveNumber([100, 4, 200, 1, 3, 2]));
+function longestConsecutiveNumber(arr) {
+  if (arr.length === 0) {
+    return 0;
+  }
+
+  const numSet = new Set(arr);
+  let maxCount = 0;
+
+  for (let num of numSet) {
+    if (!numSet.has(num - 1)) {
+      let currentNum = num;
+      let currentCount = 1;
+
+      // Keep checking for consecutive numbers
+      while (numSet.has(currentNum + 1)) {
+        currentNum++;
+        currentCount++;
+      }
+
+      maxCount = Math.max(maxCount, currentCount);
+    }
+  }
+
+  return maxCount;
+}
+
+console.log(longestConsecutiveNumber([100, 4, 200, 1, 3, 2])); // 4
+console.log(longestConsecutiveNumber([5])); // 1
+console.log(longestConsecutiveNumber([])); // 0
+console.log(longestConsecutiveNumber([1, 2, 3, 4])); // 4
+console.log(longestConsecutiveNumber([1, 2, 2, 3, 4])); // 4
