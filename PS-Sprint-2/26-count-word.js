@@ -5,9 +5,11 @@ function countWord(str) {
     let count = 0;
     for (let j = 0; j < str.length; j++) {
       if (words[i] == words[j]) {
-        coun;
+        count++;
       }
     }
+
+    return count;
   }
 }
 
